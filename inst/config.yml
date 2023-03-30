@@ -151,7 +151,7 @@ amp-ad:
   contact_email: "AMPAD_SageAdmin@synapse.org"
 
 pec:
-  app_url: "https://shinypro.synapse.org/users/awilliams/dccvalidator/"
+  app_url: "https://shinypro.synapse.org/users/danlu/dccvalidator/"
   parent: "syn21763123"
   path_to_markdown: "inst/using-the-dccvalidator-pec.Rmd"
   study_table: "syn20968992"
@@ -166,6 +166,7 @@ pec:
     path_to_docs_markdown: "inst/study-documentation-pec.Rmd"
   teams:
     - "3323356"
+    - "3454242"
   include_biospecimen_type: TRUE
   templates:
     manifest_template: "syn20782058"
