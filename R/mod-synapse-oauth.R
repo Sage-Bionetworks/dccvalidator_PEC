@@ -18,14 +18,14 @@ authorization_url <- NULL
 #' @param pkgname default R .onLoad() parameter
 .onLoad <- function(libname, pkgname) {
   synapse <<- reticulate::import("synapseclient", delay_load = TRUE)
-  if (!interactive()) {
+  #if (!interactive()) {
     setup_global_oauth_vars(
-      app_url = get_golem_config("app_url"),
+      app_url = Sys.getenv("APP_REDIRECT_URL"),
       client_name = Sys.getenv("client_name"),
       client_id = Sys.getenv("client_id"),
       client_secret = Sys.getenv("client_secret")
     )
-  }
+  #}
 }
 
 #' @title Synapse Oauth Module
