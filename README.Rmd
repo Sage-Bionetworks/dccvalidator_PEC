@@ -58,9 +58,14 @@ The dccmonitor can be authorized to log in to Synapse using Synapse Authenticati
 docker build -t dccvalidator_pec -f Dockerfile .  
 ```
 
+### Pull docker image from GitHub Container Registry
+```
+docker pull ghcr.io/sage-bionetworks/dccvalidator_pec:v1.1.0
+```
+
 ### Create a container from the docker image
 ```
-docker run --rm -it -p 8100:3838 -e APP_REDIRECT_URL=<APP_REDIRECT_URL> -e R_CONFIG_ACTIVE=pec -e client_id=<Oauth client id> -e client_name=<Oauth client name> -e client_secret=<Oauth client secret> --name <container name> dccvalidator_pec
+docker run --rm -it -p 8100:3838 -e APP_REDIRECT_URL=<APP_REDIRECT_URL> -e R_CONFIG_ACTIVE=pec -e client_id=<Oauth client id> -e client_name=<Oauth client name> -e client_secret=<Oauth client secret> --name <container name> <dccvalidator_pec or ghcr.io/sage-bionetworks/dccvalidator_pec:v1.1.0>
 ```
 Once the container is created, you can head to the APP_REDIRECT_URL you specified to enter the app. 
 
