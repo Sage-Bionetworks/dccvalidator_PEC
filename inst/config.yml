@@ -78,15 +78,14 @@ testing:
 
 
 amp-ad:
-  app_url: "https://shinypro.synapse.org/users/awilliams/dccvalidator/"
   parent: "syn21643404"
   samples_table: "syn21578908"
   annotations_table: "syn21459391"
-  annotations_link: "https://shinypro.synapse.org/users/nkauer/amp-ad-metadata-dictionary/"
+  annotations_link: "https://www.synapse.org/#!Synapse:syn25878249"
   teams:
     - "3405451"
   docs_tab:
-    include_tab: TRUE
+    include_tab: FALSE
     include_upload_widget: FALSE
     tab_name: "Study Documentation"
     path_to_docs_markdown: "inst/study-documentation-amp-ad.Rmd"
@@ -116,7 +115,7 @@ amp-ad:
       ATACseq: "syn22024364"
       autorad: "syn22087295"
       immunoassay: "syn22117582"
-      rnaSeq: "sysbio.metadataTemplates-assay.rnaSeq"
+      rnaSeq: "syn12973256"
       proteomics: "syn12973255"
       single cell RNAseq: "syn21018360"
       wholeGenomeSeq: "syn21018358"
@@ -143,9 +142,14 @@ amp-ad:
       - "path"
     individual:
       - "individualID"
+      - "species"
+      - "sex"
     biospecimen:
       - "individualID"
       - "specimenID"
+      - "organ"
+      - "tissue"
+      - "assay"
     assay:
       - "specimenID"
   contact_email: "AMPAD_SageAdmin@synapse.org"
